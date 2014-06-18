@@ -1,37 +1,25 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"></style>
 
-    <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-
-
-        <!-- <item name="android:spinnerItemStyle">@style/SpinnerItem</item> -->
-        <!-- <item name="android:spinnerDropDownItemStyle">@style/DropDownItem</item> -->
+        <item name="android:actionBarStyle">@style/OpalActionBar</item>
+        <item name="android:actionBarDivider">@null</item>
     </style>
 
     <style name="StageBaseTheme" parent="android:Theme.Holo.Light"></style>
 
-    <style name="StageTheme" parent="StageBaseTheme"></style>
+    <style name="StageTheme" parent="StageBaseTheme">
+        <item name="android:actionBarDivider">@null</item>
+    </style>
 
     <style name="DesignerBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"></style>
 
-    <style name="DesignerTheme" parent="DesignerBaseTheme"></style>
-
-    <style name="SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem"></style>
-
-    <style name="DropDownItem" parent="@android:style/Widget.DropDownItem.Spinner"></style>
+    <style name="DesignerTheme" parent="DesignerBaseTheme">
+        <item name="android:windowBackground">@color/designer_window_background</item>
+        <item name="android:actionBarStyle">@style/DesignerActionBar</item>
+        <item name="android:actionBarDivider">@null</item>
+    </style>
 
     <style name="PopupTheme" parent="android:Theme.Holo.Light">
         <item name="android:windowFrame">@null</item>
@@ -44,6 +32,23 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:windowIsTranslucent">true</item>
     </style>
+
+    <!-- ActionBar styles -->
+    <style name="DesignerActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/designer_window_background</item>
+    </style>
+
+    <style name="OpalActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/card_background</item>
+        <item name="android:logo">@drawable/actionbar_logo_4</item>
+        <item name="android:displayOptions">useLogo|showHome</item>
+    </style>
+
+    <!-- Others -->
+
+    <style name="SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem"></style>
+
+    <style name="DropDownItem" parent="@android:style/Widget.DropDownItem.Spinner"></style>
 
     <style name="drawer_item_style">
         <item name="android:fontFamily" tools:targetApi="16">sans_serif_light</item>

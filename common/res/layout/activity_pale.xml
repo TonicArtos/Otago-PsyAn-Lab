@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/designer_window_background"
+    android:background="@drawable/pale_action_bar_bg"
     android:fitsSystemWindows="true" >
 
     <!-- Hack to make sure the screen is never viewed all dark in transition from launcher. -->
